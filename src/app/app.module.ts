@@ -6,19 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewsComponent } from './pages/news/news.component';
-import { NewestComponent } from './pages/newest/newest.component';
+import { TopstoriesComponent } from './pages/topstories/topstories.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NewsComponent,
-    NewestComponent
+    TopstoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

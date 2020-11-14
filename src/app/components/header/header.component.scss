@@ -1,0 +1,45 @@
+.header {
+  background-color: rgb(255, 102, 0);
+  color: #222222;
+  padding: 3px;
+  display: flex;
+}
+
+.logo {
+  display: flex;
+
+  img {
+    outline: 1px solid #fff;
+  }
+
+  .title {
+    display: block;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+}
+
+ul#menu {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 15px;
+
+  li.item {
+    display: inline-block;
+
+    a {
+      color: #222222;
+      padding-right: 3px;
+      padding-left: 3px;
+      text-decoration: none;
+    }
+
+    &:last-child a {
+      margin-right: 0;
+    }
+  }
+}
+
+a.active {
+  color: #fff !important;
+}

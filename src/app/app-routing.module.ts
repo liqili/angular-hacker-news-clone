@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NewsComponent } from './pages/news/news.component';
-import { NewestComponent } from './pages/newest/newest.component';
+import { TopstoriesComponent } from './pages/topstories/topstories.component';
 
 const routes: Routes = [
   {
@@ -10,8 +10,8 @@ const routes: Routes = [
     component: NewsComponent,
   },
   {
-    path: 'newest',
-    component: NewestComponent,
+    path: 'topstories',
+    component: TopstoriesComponent,
   }
 ];
 
