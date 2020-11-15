@@ -4,7 +4,7 @@
     <span class="domain">({{ newsItem.url }})</span>
     <div class="subtext">
       {{ newsItem.score }} points by {{ newsItem.by }} at {{ newsItem.time * 1000 | date:'yyyy-MM-dd HH:mm:ss' }} |
-      <a [routerLink]="['/comments']" [queryParams]="{debug: true, commentIds: newsItem.kids}" queryParamsHandling="merge">
+      <a [routerLink]="['/comments']" [state]="{story:newsItem}" queryParamsHandling="merge">
         {{ newsItem.descendants}} comments
       </a>
     </div>

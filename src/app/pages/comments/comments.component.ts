@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import { ApiService } from '../../services/api/api.service';
+import {Component} from '@angular/core';
 import {NewsItem} from '../../models';
-import {ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-comments',
@@ -10,11 +9,14 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CommentsComponent {
 
-  private story: NewsItem;
+  public story: NewsItem;
 
-  public constructor(private route: ActivatedRoute) {
-    this.route.queryParams.subscribe(params => {
-      this.story = params.commentIds;
-    });
+  constructor(private router: Router) {
+    if (this.router.getCurrentNavigation().extras.state) {
+      const routeState = this.router.getCurrentNavigation().extras.state;
+      if (routeState) {
+        this.story = routeState.story;
+      }
+    }
   }
 }
