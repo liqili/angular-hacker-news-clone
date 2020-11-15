@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {forkJoin, Observable} from 'rxjs';
+import {forkJoin, Observable, from} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { NewsItem} from '../models';
+import { NewsItem} from '../../models';
 import {mergeMap} from 'rxjs/operators';
 
 @Injectable({
@@ -29,5 +29,9 @@ export class ApiService {
     return this.http.get(this.BASE_URL + 'beststories.json?orderBy="$key"&limitToFirst=50').pipe(
       mergeMap((ids: number[]) => forkJoin(ids.map((id) => this.http.get<NewsItem>(`${this.BASE_URL}/item/${id}.json`)))),
     );
+  }
+
+  getComments(commentIds: number[]): Observable<NewsItem[]> {
+    return forkJoin(commentIds.map((id) => this.http.get<NewsItem>(`${this.BASE_URL}/item/${id}.json`)));
   }
 }

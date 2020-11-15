@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from '../../services/api/api.service';
 
 import { NewsItem } from '../../models';
 
 @Component({
-  selector: 'app-news',
-  templateUrl: './news.component.html',
-  styleUrls: ['./news.component.scss']
+  selector: 'app-stories',
+  templateUrl: './stories.component.html',
+  styleUrls: ['./stories.component.scss']
 })
-export class NewsComponent implements OnInit {
+export class StoriesComponent implements OnInit {
   news: NewsItem[];
 
   constructor(private apiService: ApiService) { }

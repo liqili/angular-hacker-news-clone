@@ -3,7 +3,7 @@
     <a [href]="newsItem.url" target="_blank" class="title">{{ newsItem.title }}</a>
     <span class="domain">({{ newsItem.url }})</span>
     <div class="subtext">
-      {{ newsItem.score }} points by {{ newsItem.by }} {{ newsItem.time }} |
+      {{ newsItem.score }} points by {{ newsItem.by }} {{ newsItem.time  * 1000 | date:'yyyy-MM-dd HH:mm:ss' }} |
       <a [routerLink]="['/comments']" [queryParams]="{debug: true, id: newsItem.id}" queryParamsHandling="merge">
         {{ newsItem.descendants}} comments
       </a>

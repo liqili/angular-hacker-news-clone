@@ -5,16 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NewsComponent } from './pages/news/news.component';
+import { StoriesComponent } from './pages/stories/stories.component';
 import { TopstoriesComponent } from './pages/topstories/topstories.component';
+import {CommentsComponent} from './pages/comments/comments.component';
+import {CommentComponent} from './components/comment/comment.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NewsComponent,
-    TopstoriesComponent
+    StoriesComponent,
+    TopstoriesComponent,
+    CommentsComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,

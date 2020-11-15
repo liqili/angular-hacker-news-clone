@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="comment-item" *ngFor="let comment of comments">
+    <div>
+      <b>{{comment.by}}</b> -
+      <small>{{comment.time * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</small>
+    </div>
+    <div>
+      <b> Comment:</b> {{comment.text}}
+    </div>
+
+    <button (click)="viewReply = comment.id; onViewReply(comment)"> View Reply({{ comment.descendants}}) </button>
+
+    <!-- Container for dynamic content -->
+    <div class="dynamicContainer" *ngIf="viewReply == comment.id">
+      <ng-template #dynamic></ng-template>
+    </div>
+
+  </div>
+
+</div>
