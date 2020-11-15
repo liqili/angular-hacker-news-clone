@@ -9,13 +9,13 @@ import { NewsItem } from '../../models';
   styleUrls: ['./stories.component.scss']
 })
 export class StoriesComponent implements OnInit {
-  news: NewsItem[];
+  stories: NewsItem[];
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getStories().subscribe(news => {
-      this.news = news;
+    this.apiService.getStories().subscribe(results => {
+      this.stories = results;
     });
   }
 }

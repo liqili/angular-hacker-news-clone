@@ -26,12 +26,13 @@ export class CommentComponent implements OnInit {
   ngOnInit() {
     if (this.comment && this.comment.kids) {
       this.apiService.getComments(this.comment.kids).subscribe(comments => {
-        this.comments = comments;
+        this.comments = comments.filter(item => item);
       });
     }
   }
 
   onViewReply(comment: NewsItem) {
+    this.viewReply = comment.id;
     this.dynComponent.addDynamicComponent(this.viewContainerRef, comment);
   }
 

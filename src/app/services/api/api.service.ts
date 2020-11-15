@@ -34,4 +34,8 @@ export class ApiService {
   getComments(commentIds: number[]): Observable<NewsItem[]> {
     return forkJoin(commentIds.map((id) => this.http.get<NewsItem>(`${this.BASE_URL}/item/${id}.json`)));
   }
+
+  getStory(id: number): Observable<NewsItem> {
+    return this.http.get<NewsItem>(`${this.BASE_URL}/item/${id}.json`);
+  }
 }

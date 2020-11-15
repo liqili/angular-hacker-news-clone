@@ -1,14 +1,18 @@
-.container {
+.main{
+  margin: 10px;
+}
+
+.comment-container {
   margin-top: 20px;
   border-radius: 5px;
   border: 1px solid lightgray;
   padding: 15px;
 
   .comment-item {
-    margin-top: 10px;
+    margin-left: 20px;
   }
 
   .dynamicContainer {
-    margin-left: 50px;
+    margin-left: 20px;
   }
 }
