@@ -3,13 +3,17 @@
 }
 
 .comment-container {
-  margin-top: 20px;
   border-radius: 5px;
   border: 1px solid lightgray;
   padding: 15px;
 
+  .comment-item:first-child {
+    margin-left: 20px;
+    margin-top: 0px;
+  }
   .comment-item {
     margin-left: 20px;
+    margin-top: 20px;
   }
 
   .dynamicContainer {
