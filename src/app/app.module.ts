@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { StoriesComponent } from './pages/stories/stories.component';
-import { TopstoriesComponent } from './pages/topstories/topstories.component';
+import { TopStoriesComponent } from './pages/topstories/top-stories.component';
 import {CommentsComponent} from './pages/comments/comments.component';
 import {CommentComponent} from './components/comment/comment.component';
+import {BestStoriesComponent} from './pages/beststories/best-stories.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {CommentComponent} from './components/comment/comment.component';
     AppComponent,
     HeaderComponent,
     StoriesComponent,
-    TopstoriesComponent,
+    TopStoriesComponent,
+    BestStoriesComponent,
     CommentsComponent,
     CommentComponent
   ],

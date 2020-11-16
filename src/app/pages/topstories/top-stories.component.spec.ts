@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { TopstoriesComponent } from './topstories.component';
+import { TopStoriesComponent } from './top-stories.component';
 
 describe('NewestComponent', () => {
-  let component: TopstoriesComponent;
-  let fixture: ComponentFixture<TopstoriesComponent>;
+  let component: TopStoriesComponent;
+  let fixture: ComponentFixture<TopStoriesComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopstoriesComponent ]
+      declarations: [ TopStoriesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopstoriesComponent);
+    fixture = TestBed.createComponent(TopStoriesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

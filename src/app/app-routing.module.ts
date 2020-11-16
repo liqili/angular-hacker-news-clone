@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { StoriesComponent } from './pages/stories/stories.component';
-import { TopstoriesComponent } from './pages/topstories/topstories.component';
+import { TopStoriesComponent } from './pages/topstories/top-stories.component';
 import {CommentsComponent} from './pages/comments/comments.component';
+import {BestStoriesComponent} from './pages/beststories/best-stories.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'topstories',
-    component: TopstoriesComponent,
+    component: TopStoriesComponent,
+  },
+  {
+    path: 'beststories',
+    component: BestStoriesComponent,
   },
   {
     path: 'comments',
