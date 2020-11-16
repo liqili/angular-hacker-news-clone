@@ -1,5 +1,5 @@
 <div class="main">
-  <a [href]="story.url" target="_blank" class="title">{{ story.title }}</a>
+  <a [href]="story && story.url" target="_blank" class="title">{{ story.title }}</a>
   <div class="subtext">
     {{ story.score }} points by {{ story.by }} {{ story.time  * 1000 | date:'yyyy-MM-dd HH:mm:ss' }}
   </div>

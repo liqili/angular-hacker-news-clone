@@ -33,7 +33,10 @@ export class CommentComponent implements OnInit {
 
   onViewReply(comment: NewsItem) {
     this.viewReply = comment.id;
-    this.dynComponent.addDynamicComponent(this.viewContainerRef, comment);
+    setTimeout(() => {
+      this.dynComponent.addDynamicComponent(this.viewContainerRef, comment);
+    }, 100);
+
   }
 
 }

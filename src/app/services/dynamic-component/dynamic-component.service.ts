@@ -24,5 +24,6 @@ export class DynamicComponentService {
 
     currComponent.comment = comment;
     viewContainerRef.insert(component.hostView);
+
   }
 }
