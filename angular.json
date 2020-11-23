@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "moxion-angular-hacker-news": {
+    "angular-hacker-news-clone": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/moxion-angular-hacker-news",
+            "outputPath": "dist/angular-hacker-news-clone",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "moxion-angular-hacker-news:build"
+            "browserTarget": "angular-hacker-news-clone:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "moxion-angular-hacker-news:build:production"
+              "browserTarget": "angular-hacker-news-clone:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "moxion-angular-hacker-news:build"
+            "browserTarget": "angular-hacker-news-clone:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "moxion-angular-hacker-news:serve"
+            "devServerTarget": "angular-hacker-news-clone:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "moxion-angular-hacker-news:serve:production"
+              "devServerTarget": "angular-hacker-news-clone:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "moxion-angular-hacker-news"
+  "defaultProject": "angular-hacker-news-clone"
 }

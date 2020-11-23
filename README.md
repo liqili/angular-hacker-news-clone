@@ -1,5 +1,5 @@
 
-#  moxion-angular-hacker-news 😍
+#  angular-hacker-news-clone 😍
 
 
 ## Table of Content

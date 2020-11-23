@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'moxion-angular-hacker-news'`, () => {
+  it(`should have as title 'angular-hacker-news-clone'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('moxion-angular-hacker-news');
+    expect(app.title).toEqual('angular-hacker-news-clone');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('moxion-angular-hacker-news app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-hacker-news-clone app is running!');
   });
 });
